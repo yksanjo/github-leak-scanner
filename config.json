@@ -1,0 +1,9 @@
+{
+  "domains": [
+    "example.com",
+    "yourcompany.com"
+  ],
+  "githubToken": "",
+  "interval": 30,
+  "verbose": false
+}
