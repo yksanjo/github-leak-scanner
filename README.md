@@ -1,66 +1,84 @@
-# GitHub Leak Scanner
+# github-leak-scanner
 
-A CLI tool that monitors GitHub repositories, gists, and commits for leaked credentials from your domains.
+## Detailed Description
 
-## Installation
+github-leak-scanner is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
+
+## Problem Statement
+
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-cd github-leak-scanner
-npm install
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-### Basic Usage
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```bash
-# Single scan
-node src/index.js -d example.com -o
+## Quality Standards
 
-# With GitHub token (recommended for higher rate limits)
-node src/index.js -d example.com -t YOUR_GITHUB_TOKEN
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-# Continuous monitoring
-node src/index.js -d example.com,yourcompany.com
-```
+## Security
 
-### With Configuration File
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-Create a `config.json` file:
+## Contributing
 
-```json
-{
-  "domains": ["example.com", "yourcompany.com"],
-  "githubToken": "your_github_token_here",
-  "interval": 30,
-  "verbose": false
-}
-```
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-Then run:
+## Roadmap
 
-```bash
-node src/index.js
-```
+Track upcoming milestones, technical debt, and planned feature work.
 
-## Options
+## Support
 
-| Option | Short | Description | Default |
-|--------|-------|-------------|---------|
-| `--config` | `-c` | Path to config file | `config.json` |
-| `--domains` | `-d` | Comma-separated list of domains | (required) |
-| `--token` | `-t` | GitHub personal access token | env.GITHUB_TOKEN |
-| `--once` | `-o` | Run once and exit | Continuous |
-| `--interval` | `-i` | Check interval in minutes | 30 |
-| `--verbose` | `-v` | Verbose output | false |
-
-## Features
-
-- Searches GitHub code for leaked credentials
-- Monitors public gists for credentials
-- Supports GitHub API with authentication
-- Detects multiple credential types
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
+This project is released under the MIT License.
