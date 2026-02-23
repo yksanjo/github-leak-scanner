@@ -1,5 +1,12 @@
 # github-leak-scanner
 
+Production-grade project scaffold focused on reliability, maintainability, and fast onboarding.
+
+[![CI](https://img.shields.io/github/actions/workflow/status/yksanjo/github-leak-scanner/ci.yml?branch=main&label=ci)](https://github.com/yksanjo/github-leak-scanner/actions)
+![License](https://img.shields.io/github/license/yksanjo/github-leak-scanner)
+![Last Commit](https://img.shields.io/github/last-commit/yksanjo/github-leak-scanner)
+![Repo Size](https://img.shields.io/github/repo-size/yksanjo/github-leak-scanner)
+
 ## Detailed Description
 
 github-leak-scanner is maintained as an industry-grade software project with production-ready engineering practices.  
